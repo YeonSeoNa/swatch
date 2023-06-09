@@ -4,7 +4,7 @@
 /* font-family: 'Righteous', cursive; */
 
 
-/* html, body { overflow-x:hidden } */
+html, body { overflow-x:hidden }
 
 /* 
   position:fixed 와 position:absolute를 적용하고,
@@ -13,55 +13,51 @@
 h1 { position:fixed; top:50px; left:50px; z-index:9 }
 h1 img { width:200px; }
 
-.open { position:fixed; right:50px; top:30px;
-    width:50px; height:50px; border-radius:50%;
-    background:#000; cursor:pointer; z-index:999;
-    display:none;
-}
-
-.open .bar { display:block;  
-    height:4px; background:#fff; border-radius:2px;
-    position:absolute; transition:all 0.5s; 
-}
-.open .bar1 { top:12px; width:15px; left:10px }
-.open .bar2 { top:50%; margin-top:-2px; width:30px; left:10px }
-.open .bar3 { bottom:12px; width:20px; right:20px; }
-
-.open.on .bar1 {  transform:translateX(4px) rotate(45deg); transform-origin:0% 50%; }
-.open.on .bar2 {  transform:rotate(-45deg); transform-origin:50% 50%;  }
-.open.on .bar3 {  transform:translateX(6px) rotate(45deg); transform-origin:100% 50%; width:15px}
-
-.openlist {
-    position:fixed; top:0; left:100%; bottom:0;
-    width:100%; 
-    background:brown;
-    z-index:99;
+#nav { position:fixed; top:50%; transform:translateY(-50%); left:0; z-index:9999}
+#nav .depth1 { width:200px; }
+#nav .depth1 li a {
+    display:block; font-size:14px; 
+    color:#000; text-align:right;
+    border-top:1px solid #111;
+    height:60px;  
+    font-family: 'Righteous', cursive;
+    padding-top:5px; 
     transition:all 0.5s; 
 }
-.open.on + .openlist { left:0 }
-
-.openlist .depth1 {
-    position:absolute; top:50%; left:50%;
-    transform:translate(-50%, -50%);
-    color:#fff; font-size:40px; 
-    line-height:2em;
+#nav .depth1 li:nth-child(1) a:hover {
+    font-size:24px; color:#d4164c; 
+    border-color:#d4164c
+}
+#nav .depth1 li:nth-child(1).on a {
+    font-size:24px; color:#d4164c; 
+    border-color:#d4164c
+}
+#nav .depth1 li:nth-child(2) a:hover {
+    font-size:24px; color:#fff; 
+    border-color:#fff
+}
+#nav .depth1 li:nth-child(2).on a {
+    font-size:24px; color:#fff; 
+    border-color:#fff
+}
+#nav .depth1 li:nth-child(3) a:hover {
+    font-size:24px; color:#ffec6a; 
+    border-color:#ffec6a
+}
+#nav .depth1 li:nth-child(3).on a {
+    font-size:24px; color:#ffec6a; 
+    border-color:#ffec6a
+}
+#nav .depth1 li:nth-child(4) a:hover {
+    font-size:24px; color:#005a89; 
+    border-color:#005a89
+}
+#nav .depth1 li:nth-child(4).on a {
+    font-size:24px; color:#005a89; 
+    border-color:#005a89
 }
 
-
-
-#nav { position:fixed; top:50%; transform:translateY(-50%); left:50px; z-index:9}
-#nav li a { display:block; width:20px; height:20px; 
-    border-radius:50%; background:red; 
-    margin:10px 0; position:relative; 
-}
-#nav li.on a { background:blue }
-#nav li a span { position:absolute; top:50%; 
-    transform:translateY(-50%);
-    left:25px; width:100px; display:none }
-#nav li.on a span { display:inline-block }
-
-
-#sns { position:fixed; top:40px; right:150px; z-index:9}
+#sns { position:fixed; top:40px; right:50px; z-index:9}
 #sns a { display:inline-block;  font-size:25px; 
     color:rgba(0, 0, 0, 0.5); 
     margin-left:15px; transition:all 0.5s }
@@ -70,21 +66,19 @@ h1 img { width:200px; }
     transform:rotate(135deg)
 }
 
-#wrap {width: 400vw; overflow: hidden; display:flex;}
-#wrap .section { height:100vh; flex: 1;
+#wrap .section { width:100vw; height:100vh;
     background-position:right center;
     background-size:cover; 
     position:relative; 
     overflow:hidden; 
-    
 }
 #wrap #sect1 { background-image:url(../img/bg1.jpg) }
 #wrap #sect2 { background-image:url(../img/bg2.jpg) }
 #wrap #sect3 { background-image:url(../img/bg3.jpg) }
 #wrap #sect4 { background-image:url(../img/bg4.jpg) }
-#wrap .article { position:absolute; top:46%; left:300px; z-index:10; width:50% }
+#wrap .article { position:absolute; top:46%; left:300px; z-index:10; }
 #wrap .article p {  font-family: 'Righteous', cursive; font-size:50px; letter-spacing:2px; }
-#wrap .article span { font-size:16px; 
+#wrap .article span { font-size:16px; width:500px; 
     display:block; color:#fff;
     line-height:1.2 
 }

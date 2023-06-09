@@ -1,0 +1,10 @@
+@media screen and (max-width:768px) {
+
+    .open { display:block; }
+    #nav { position:fixed; top:50%; 
+        transform:translateY(-50%); left:50px; z-index:9; 
+        display:none; 
+    }
+    #wrap .article { position:absolute; top:46%; left:50px; z-index:10; width:70% }
+
+}
